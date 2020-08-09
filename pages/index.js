@@ -1,7 +1,24 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export async function getServerSideProps() {
+  const res = await fetch(
+    "https://us-central1-devchallenges-1234.cloudfunctions.net/api/users/HDqHrbO7KlaaGqYxovwK"
+  );
+  const profile = await res.json();
+
+  console.log(profile);
+
+  // By returning { props: posts }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      profile,
+    },
+  };
+}
+
+export default function Home({ profile }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -10,12 +27,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <h1 className={styles.title}>Welcome to {profile.name}</h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
@@ -56,10 +71,10 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
     </div>
-  )
+  );
 }
