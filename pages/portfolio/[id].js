@@ -1,20 +1,18 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import styles from "../../styles/Home.module.css";
 
 export async function getServerSideProps({ params }) {
-  const res = await fetch(
-    `${process.env.API_BASE_URL}/users/2HBMX5sxYBCygzdkhHcI`
-  );
-  const profile = await res.json();
+  const res = await fetch(`${process.env.API_BASE_URL}/users/${params.id}`);
+  const user = await res.json();
 
   return {
     props: {
-      profile,
+      user,
     },
   };
 }
 
-export default function Home({ profile }) {
+export default function Home({ user }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -23,7 +21,7 @@ export default function Home({ profile }) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to {profile.name}</h1>
+        <h1 className={styles.title}>Welcome to {user.name}</h1>
 
         <p className={styles.description}>
           Get started by editing{" "}
