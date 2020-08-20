@@ -1,0 +1,131 @@
+@import "shared/styles/base/_breakpoints";
+
+.cardSolution {
+  background-color: var(--white);
+  padding: var(--space-lg);
+  border-radius: var(--rounded-lg);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  color: var(--primary-text-color);
+  user-select: none;
+
+  a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+  }
+
+  h3 {
+    cursor: pointer;
+
+    margin-bottom: 0;
+    font-weight: 500;
+    transition: text-decoration var(--duration-200) ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &_space {
+    flex-grow: 1;
+  }
+
+  &_helpRequest {
+    margin-bottom: var(--space-lg);
+    border: 1px solid var(--grey-3);
+    border-radius: var(--rounded);
+
+    padding: var(--space-sm);
+    font-size: var(--text-md);
+    color: var(--grey-7);
+
+    &_message {
+      margin-bottom: var(--space-md);
+    }
+
+    &_label {
+      font-size: var(--text-xs);
+      color: var(--blue);
+      margin-bottom: var(--space-2xs);
+    }
+
+    &_firstOne {
+      color: var(--purple);
+      margin-bottom: 0;
+    }
+  }
+
+  &_topSection {
+    margin-bottom: var(--space-sm);
+  }
+
+  &_buttons {
+    display: none;
+
+    @include breakpoint("sm") {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      flex-direction: row;
+
+      div {
+        &:first-child {
+          margin-right: var(--space-xs);
+        }
+      }
+    }
+  }
+
+  &_challenge {
+    display: flex;
+    background-color: var(--grey-2);
+    padding: var(--space-sm);
+    border-radius: var(--rounded);
+    color: var(--grey-6);
+
+    &_tagsWrapper {
+      margin-bottom: var(--space-md);
+    }
+
+    &_imgWrapper {
+      img {
+        width: 100%;
+        height: 110px;
+        border-radius: var(--rounded-lg);
+
+        object-fit: cover;
+      }
+    }
+  }
+
+  &_userWrapper {
+    display: flex;
+    margin-bottom: var(--space-lg);
+  }
+
+  @mixin likeButton {
+    border: none;
+    background-color: transparent;
+    margin-right: var(--space-md);
+    font-size: var(--space-md);
+    border-right: 1px solid var(--grey-3);
+    padding-right: var(--space-md);
+    color: var(--grey-6);
+    transition: color var(--duration-100) ease-in-out;
+    outline: none;
+    text-align: center;
+
+    p {
+      font-size: var(--space-sm);
+      margin: 0;
+    }
+  }
+
+  &_likeButton {
+    @include likeButton();
+  }
+}

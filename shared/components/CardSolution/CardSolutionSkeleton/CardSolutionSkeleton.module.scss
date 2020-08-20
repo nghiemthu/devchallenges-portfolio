@@ -1,0 +1,12 @@
+.cardSolutionSkeleton {
+  background-color: var(--white);
+  padding: var(--space-md);
+  border-radius: var(--rounded-lg);
+  box-shadow: var(--shadow);
+
+  &_flexRow {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-md);
+  }
+}

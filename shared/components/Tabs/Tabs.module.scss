@@ -1,0 +1,87 @@
+@import "shared/styles/base/_breakpoints";
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+  padding: var(--space-xs);
+  border-radius: var(--rounded-lg);
+  box-shadow: var(--shadow-md);
+
+  margin-bottom: var(--space-xl);
+
+  ul,
+  li,
+  ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    flex-grow: 1;
+    margin-right: var(--space-xs);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &_tab {
+    text-align: center;
+    font-family: var(--heading-font-family);
+    font-size: var(--text-sm);
+    padding: var(--space-sm);
+    border-radius: var(--rounded-lg);
+    outline: none;
+    background-color: var(--white);
+    color: var(--grey-5);
+    font-weight: 700;
+
+    cursor: pointer;
+    width: 100%;
+    border: none;
+
+    transition: all var(--duration-200) ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: var(--grey-3);
+    }
+
+    &__active {
+      font-weight: 700;
+      position: relative;
+      color: var(--primary-text-color);
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: calc(-1 * var(--space-xs));
+        left: calc(50% - 38px);
+        width: 80px;
+        height: 4px;
+        background-color: var(--primary-color);
+        border-radius: var(--rounded) var(--rounded) 0 0;
+
+        @include breakpoint("sm") {
+          left: calc(50% - 68px);
+          width: 140px;
+        }
+      }
+    }
+  }
+
+  &_label {
+    @include breakpoint("sm") {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &_text {
+        margin-left: var(--space-xs);
+      }
+    }
+  }
+}

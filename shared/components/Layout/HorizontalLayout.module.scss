@@ -1,0 +1,44 @@
+.horizontalLayout {
+  color: inherit;
+  display: flex;
+  height: 100vh;
+
+  &_content {
+    flex-grow: 1;
+    padding: var(--space-lg);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  &_sideNavigation {
+    width: 320px;
+    height: 100%;
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-lg);
+
+    &_profileImage {
+      border-radius: var(--rounded-lg);
+      margin-bottom: var(--space-lg);
+    }
+
+    &_name {
+      font-size: var(--text-2xl);
+      font-family: var(--heading-font-family);
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    &_username {
+      font-size: var(--text-lg);
+      color: var(--grey-5);
+      font-family: var(--heading-font-family);
+      font-weight: 300;
+      margin-bottom: var(--space-md);
+    }
+
+    &_bio {
+      color: var(--grey-7);
+      font-size: var(--text-lg);
+    }
+  }
+}
