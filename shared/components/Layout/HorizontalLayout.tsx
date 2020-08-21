@@ -20,7 +20,9 @@ const HorizontalLayout = ({
         <p className={styles.horizontalLayout_sideNavigation_bio}>{bio}</p>
       </div>
 
-      <div className={styles.horizontalLayout_content}>{children}</div>
+      <div className={styles.horizontalLayout_contentWrapper}>
+        <div className={styles.horizontalLayout_children}>{children}</div>
+      </div>
     </div>
   );
 };

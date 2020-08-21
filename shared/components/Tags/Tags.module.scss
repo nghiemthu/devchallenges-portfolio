@@ -1,0 +1,13 @@
+.tags {
+  &_tag {
+    background-color: var(--default-button-background-color);
+    color: var(--grey-6);
+    border-radius: var(--rounded-md);
+    padding: var(--space-2xs) var(--space-xs);
+    margin-right: var(--space-sm);
+    font-weight: 700;
+    font-size: var(--text-xs);
+    margin-bottom: var(--space-2xs);
+    display: inline-block;
+  }
+}

@@ -59,7 +59,7 @@
   }
 
   &_topSection {
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-lg);
   }
 
   &_buttons {
@@ -127,5 +127,10 @@
 
   &_likeButton {
     @include likeButton();
+  }
+
+  &_feedback {
+    @include likeButton();
+    border-right: none;
   }
 }

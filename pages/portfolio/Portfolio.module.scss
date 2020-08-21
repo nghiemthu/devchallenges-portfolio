@@ -1,3 +1,9 @@
 .portfolio {
   color: inherit;
+
+  h4 {
+    color: var(--grey-5);
+    font-size: var(--text-xs);
+    margin-bottom: var(--space-lg);
+  }
 }

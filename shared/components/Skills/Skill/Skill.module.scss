@@ -1,0 +1,41 @@
+.skill {
+  display: flex;
+  align-items: center;
+  color: var(--grey-6);
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+
+  &:hover &_name {
+    color: var(--primary-color);
+  }
+
+  &:hover &_endorsementsButton {
+    color: var(--primary-color);
+  }
+
+  &_name {
+    font-family: var(--heading-font-family);
+    font-size: var(--text-lg);
+    font-weight: 500;
+    margin-right: var(--space-xs);
+    color: var(--primary-text-color);
+    text-align: left;
+  }
+
+  &_endorsementsButton {
+    margin-left: var(--space-xs);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: var(--grey-6);
+    font-family: var(--font-family);
+    font-weight: 500;
+    text-align: left;
+  }
+}
