@@ -1,4 +1,11 @@
-@import "../shared/styles/main.scss";
+@import "../shared/styles/base/_breakpoints.scss";
+@import "../shared/styles/base/_colors.scss";
+@import "../shared/styles/base/_space.scss";
+@import "../shared/styles/base/_typography.scss";
+@import "../shared/styles/base/_reset.scss";
+@import "../shared/styles/base/_border.scss";
+@import "../shared/styles/base/_transition.scss";
+@import "../shared/styles/base/_boxshadow.scss";
 
 html,
 body {
