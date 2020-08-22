@@ -28,7 +28,7 @@ const Certificates: FunctionComponent<{ certificates: any }> = ({
             <Grid item xs={12} md={6} key={id}>
               <a
                 className={styles.certificates_certificate}
-                to={`/certificate/${id}`}
+                href={`/certificate/${id}`}
               >
                 <Grid container direction="row" spacing={3}>
                   <Grid item xs={4}>

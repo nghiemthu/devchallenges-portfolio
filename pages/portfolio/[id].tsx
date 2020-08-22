@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "./Portfolio.module.scss";
-import HorizontalLayout from "components/layout/HorizontalLayout";
 import Certificates from "components/Certificates/Certificates";
 import Tabs from "components/Tabs/Tabs";
 import {
@@ -14,10 +13,10 @@ import CardSolution from "components/CardSolution/CardSolution";
 import Grid from "@material-ui/core/Grid";
 import Skills from "components/Skills/Skills";
 import BadgeSummary from "components/BadgeSummary/BadgeSummary";
-import { Divider } from "@material-ui/core";
 import BadgeSmallSummary from "components/BadgeSmallSummary/BadgeSmallSummary";
 import challengePaths from "data/challengePaths";
 import RecentFeedbacks from "components/RecentFeedbacks/RecentFeedbacks";
+import HorizontalLayout from "components/Layout/HorizontalLayout";
 
 export async function getServerSideProps() {
   const res = await fetch(
@@ -41,11 +40,11 @@ enum TabValues {
 
 export default function Portfolio({ profile }) {
   const [tab, setTab] = useState<TabValues>(TabValues.overview);
-  const [solutions, setSolutions] = useState();
-  const [skills, setSkills] = useState();
-  const [certificates, setCertificates] = useState();
-  const [badges, setBadges] = useState();
-  const [feedbacks, setFeedbacks] = useState();
+  const [solutions, setSolutions] = useState([]);
+  const [skills, setSkills] = useState([]);
+  const [certificates, setCertificates] = useState([]);
+  const [badges, setBadges] = useState([]);
+  const [feedbacks, setFeedbacks] = useState([]);
 
   const tabs = [
     {
@@ -55,7 +54,7 @@ export default function Portfolio({ profile }) {
     },
     {
       value: TabValues.projects,
-      label: `Projects (${solutions?.length || 0})`,
+      label: `Projects (${solutions ? solutions.length : 0})`,
       Icon: ViewDayRounded,
     },
     {
@@ -174,7 +173,7 @@ export default function Portfolio({ profile }) {
               </div>
             )}
 
-            {badges && badges.length > 0 && (
+            {badges.length > 0 && (
               <div className={styles.portfolio_sideNavigation_achievement}>
                 <h3>Badges</h3>
                 <BadgeSmallSummary badges={badges} />
@@ -189,24 +188,23 @@ export default function Portfolio({ profile }) {
           <>
             {skills && <Skills skills={skills} />}
 
-            {solutions &&
-              solutions.filter((solution) => solution.pinned).length > 0 && (
-                <>
-                  <h3>Pinned</h3>
+            {solutions.filter((solution) => solution.pinned).length > 0 && (
+              <>
+                <h3>Pinned</h3>
 
-                  <Grid container spacing={3}>
-                    {solutions
-                      .filter((solution) => solution.pinned)
-                      .map((solution) => (
-                        <Grid item xs={12} sm={6} key={solution.id}>
-                          <CardSolution solution={solution} />
-                        </Grid>
-                      ))}
-                  </Grid>
-                </>
-              )}
+                <Grid container spacing={3}>
+                  {solutions
+                    .filter((solution) => solution.pinned)
+                    .map((solution) => (
+                      <Grid item xs={12} sm={6} key={solution.id}>
+                        <CardSolution solution={solution} />
+                      </Grid>
+                    ))}
+                </Grid>
+              </>
+            )}
 
-            {feedbacks && feedbacks.length > 0 && (
+            {feedbacks.length > 0 && (
               <RecentFeedbacks recentFeedbacks={feedbacks} />
             )}
           </>
@@ -215,8 +213,7 @@ export default function Portfolio({ profile }) {
         {tab === TabValues.projects && (
           <>
             <Grid container spacing={3}>
-              {solutions &&
-                solutions.length > 0 &&
+              {solutions.length > 0 &&
                 solutions?.map((solution) => (
                   <Grid item xs={12} sm={6} key={solution.id}>
                     <CardSolution solution={solution} />

@@ -6,8 +6,6 @@ import Bronze from "icons/Bronze";
 import Silver from "icons/Silver";
 import Diamond from "icons/Diamond";
 import Gold from "icons/Gold";
-import Penalty from "icons/Penalty";
-import PenaltyTwo from "icons/PenaltyTwo";
 
 const groupBadge = (badges: any) => {
   return groupBy(badges, "type");
