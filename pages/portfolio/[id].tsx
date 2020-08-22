@@ -18,9 +18,9 @@ import challengePaths from "data/challengePaths";
 import RecentFeedbacks from "components/RecentFeedbacks/RecentFeedbacks";
 import HorizontalLayout from "components/Layout/HorizontalLayout";
 
-export async function getServerSideProps() {
+export async function getServerSideProps({ params }) {
   const res = await fetch(
-    `${process.env.API_BASE_URL}/users/username/nghiemthu`
+    `${process.env.API_BASE_URL}/users/username/${params.id}`
   );
 
   const profile = await res.json();
