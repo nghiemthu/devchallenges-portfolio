@@ -99,15 +99,10 @@ strong {
 
 a {
   text-decoration: none;
-  color: var(--blue-dark);
 }
 
 html {
   box-sizing: border-box;
-}
-
-body {
-  background-color: var(--color-bg, white);
 }
 
 article,
@@ -128,9 +123,7 @@ form legend {
 
 ol,
 ul {
-  padding-left: var(--space-lg);
   margin: 0;
-  margin-bottom: var(--space-md);
 }
 
 blockquote,

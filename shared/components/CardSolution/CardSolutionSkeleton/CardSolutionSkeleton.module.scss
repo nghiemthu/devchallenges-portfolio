@@ -1,12 +1,14 @@
+@import "shared/styles/main";
+
 .cardSolutionSkeleton {
-  background-color: var(--white);
-  padding: var(--space-md);
-  border-radius: var(--rounded-lg);
-  box-shadow: var(--shadow);
+  background-color: $white;
+  padding: $space-md;
+  border-radius: $rounded-lg;
+  box-shadow: $shadow;
 
   &_flexRow {
     display: flex;
     justify-content: center;
-    margin-top: var(--space-md);
+    margin-top: $space-md;
   }
 }

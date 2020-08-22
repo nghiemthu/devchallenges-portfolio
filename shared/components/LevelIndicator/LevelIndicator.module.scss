@@ -1,43 +1,45 @@
+@import "shared/styles/main";
+
 .levelIndicator {
   display: flex;
-  margin-bottom: var(--space-lg);
+  margin-bottom: $space-lg;
 
   &_level {
-    font-size: var(--text-xs);
+    font-size: $text-xs;
     text-transform: capitalize;
-    color: var(--grey-5);
-    margin-bottom: var(--space-2xs);
+    color: $grey-5;
+    margin-bottom: $space-2xs;
   }
 
   &_bar {
-    background-color: var(--grey-3);
+    background-color: $grey-3;
     flex-grow: 1;
     height: 6px;
-    border-radius: var(--rounded-sm);
-    margin-right: var(--space-2xs);
+    border-radius: $rounded-sm;
+    margin-right: $space-2xs;
 
     &__primaryColor {
-      background-color: var(--primary-color-xlight);
+      background-color: $primary-color-xlight;
     }
 
     &__red {
-      background-color: var(--red-light);
+      background-color: $red-light;
     }
 
     &__yellow {
-      background-color: var(--yellow-light);
+      background-color: $yellow-light;
     }
 
     &__green {
-      background-color: var(--green-light);
+      background-color: $green-light;
     }
 
     &__blue {
-      background-color: var(--blue-light);
+      background-color: $blue-light;
     }
 
     &__purple {
-      background-color: var(--purple-light);
+      background-color: $purple-light;
     }
 
     &:last-child {

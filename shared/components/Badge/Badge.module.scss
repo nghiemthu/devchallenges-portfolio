@@ -1,12 +1,14 @@
+@import "shared/styles/main";
+
 .badge {
   display: flex;
   align-items: center;
-  background-color: var(--badge-background);
+  background-color: $badge-background;
   width: fit-content;
-  padding: var(--space-xs);
-  color: var(--badge-color);
-  border-radius: var(--rounded);
-  border-left: 4px solid var(--grey-7);
+  padding: $space-xs;
+  color: $badge-color;
+  border-radius: $rounded;
+  border-left: 4px solid $grey-7;
 
   &_symbol {
     width: 20px;
@@ -17,28 +19,28 @@
   }
 
   &_feedback {
-    border-color: var(--yellow-dark);
+    border-color: $yellow-dark;
   }
 
   &_participant {
-    border-color: var(--purple);
+    border-color: $purple;
   }
 
   &_solution {
-    border-color: var(--blue-dark);
+    border-color: $blue-dark;
   }
 
   &_patreon {
-    border-color: var(--green-dark);
+    border-color: $green-dark;
   }
 
   &_penalty {
-    border-color: var(--red);
+    border-color: $red;
   }
 
   label {
-    margin-left: var(--space-xs);
-    font-size: var(--text-xs);
-    font-family: var(--heading-font-family);
+    margin-left: $space-xs;
+    font-size: $text-xs;
+    font-family: $heading-font-family;
   }
 }

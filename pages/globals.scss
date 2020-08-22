@@ -1,0 +1,57 @@
+@import "shared/styles/main";
+@import "shared/styles/base/_reset";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-weight: 500;
+  margin-bottom: $space-sm;
+}
+
+h1 {
+  font-size: $text-2xl;
+  margin-bottom: $space-md;
+}
+
+h2 {
+  font-size: $text-xl;
+  margin-bottom: $space-md;
+}
+
+h3 {
+  font-size: $text-lg;
+}
+
+h4 {
+  font-size: $text-md;
+}
+
+h5 {
+  font-size: $text-sm;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: $space-sm;
+  max-width: 720px;
+}
+
+i {
+  font-style: italic;
+}
+
+li {
+  line-height: 1.5;
+  margin-bottom: $space-2xs;
+}

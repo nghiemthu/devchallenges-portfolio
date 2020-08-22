@@ -1,3 +1,5 @@
+@import "shared/styles/main";
+
 .badgeSummary {
   display: block;
 
@@ -5,32 +7,32 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: var(--space-sm);
+    padding-bottom: $space-sm;
 
     &_borderBottom {
-      border-bottom: 1px solid var(--grey-3);
-      margin-bottom: var(--space-sm);
+      border-bottom: 1px solid $grey-3;
+      margin-bottom: $space-sm;
     }
 
     &_number {
-      margin-left: var(--space-xs);
-      font-family: var(--heading-font-family);
-      color: var(--grey-7);
+      margin-left: $space-xs;
+      font-family: $heading-font-family;
+      color: $grey-7;
     }
 
     &_number {
-      margin-top: var(--space-2xs);
+      margin-top: $space-2xs;
       text-align: right;
-      color: var(--grey-5);
-      font-size: var(--text-sm);
+      color: $grey-5;
+      font-size: $text-sm;
     }
   }
 
   &_panel {
-    background-color: var(--white);
+    background-color: $white;
     height: 100%;
-    padding: var(--space-sm);
-    border-radius: var(--rounded);
-    box-shadow: var(--shadow-sm);
+    padding: $space-sm;
+    border-radius: $rounded;
+    box-shadow: $shadow-sm;
   }
 }

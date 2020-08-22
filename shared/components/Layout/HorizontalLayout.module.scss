@@ -1,15 +1,17 @@
+@import "shared/styles/main";
+
 .horizontalLayout {
   display: flex;
   max-height: 100vh;
-  background-color: var(--background-color);
+  background-color: $background-color;
 
   &_sideNavigation {
     width: 380px;
     height: 100%;
     height: 100vh;
-    padding: var(--space-xl);
-    box-shadow: var(--shadow-lg);
-    background-color: var(--white);
+    padding: $space-xl;
+    box-shadow: $shadow-lg;
+    background-color: $white;
   }
 
   &_contentWrapper {
@@ -21,7 +23,7 @@
   }
 
   &_children {
-    padding: var(--space-xl);
+    padding: $space-xl;
     width: 100%;
     margin: 0 auto;
     flex-grow: 1;

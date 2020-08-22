@@ -1,20 +1,21 @@
 @import "shared/styles/base/_breakpoints";
+@import "shared/styles/main";
 
 .cardSolution {
-  background-color: var(--white);
-  padding: var(--space-lg);
-  border-radius: var(--rounded-lg);
-  box-shadow: var(--shadow);
+  background-color: $white;
+  padding: $space-lg;
+  border-radius: $rounded-lg;
+  box-shadow: $shadow;
   display: flex;
   flex-direction: column;
   height: 100%;
   cursor: pointer;
-  color: var(--primary-text-color);
+  color: $primary-text-color;
   user-select: none;
 
   a {
     text-decoration: none;
-    color: var(--primary-text-color);
+    color: $primary-text-color;
   }
 
   h3 {
@@ -22,7 +23,7 @@
 
     margin-bottom: 0;
     font-weight: 500;
-    transition: text-decoration var(--duration-200) ease-in-out;
+    transition: text-decoration $duration-200 ease-in-out;
 
     &:hover {
       text-decoration: underline;
@@ -34,32 +35,32 @@
   }
 
   &_helpRequest {
-    margin-bottom: var(--space-lg);
-    border: 1px solid var(--grey-3);
-    border-radius: var(--rounded);
+    margin-bottom: $space-lg;
+    border: 1px solid $grey-3;
+    border-radius: $rounded;
 
-    padding: var(--space-sm);
-    font-size: var(--text-md);
-    color: var(--grey-7);
+    padding: $space-sm;
+    font-size: $text-md;
+    color: $grey-7;
 
     &_message {
-      margin-bottom: var(--space-md);
+      margin-bottom: $space-md;
     }
 
     &_label {
-      font-size: var(--text-xs);
-      color: var(--blue);
-      margin-bottom: var(--space-2xs);
+      font-size: $text-xs;
+      color: $blue;
+      margin-bottom: $space-2xs;
     }
 
     &_firstOne {
-      color: var(--purple);
+      color: $purple;
       margin-bottom: 0;
     }
   }
 
   &_topSection {
-    margin-bottom: var(--space-lg);
+    margin-bottom: $space-lg;
   }
 
   &_buttons {
@@ -74,7 +75,7 @@
 
       div {
         &:first-child {
-          margin-right: var(--space-xs);
+          margin-right: $space-xs;
         }
       }
     }
@@ -82,20 +83,20 @@
 
   &_challenge {
     display: flex;
-    background-color: var(--grey-2);
-    padding: var(--space-sm);
-    border-radius: var(--rounded);
-    color: var(--grey-6);
+    background-color: $grey-2;
+    padding: $space-sm;
+    border-radius: $rounded;
+    color: $grey-6;
 
     &_tagsWrapper {
-      margin-bottom: var(--space-md);
+      margin-bottom: $space-md;
     }
 
     &_imgWrapper {
       img {
         width: 100%;
         height: 110px;
-        border-radius: var(--rounded-lg);
+        border-radius: $rounded-lg;
 
         object-fit: cover;
       }
@@ -104,23 +105,23 @@
 
   &_userWrapper {
     display: flex;
-    margin-bottom: var(--space-lg);
+    margin-bottom: $space-lg;
   }
 
   @mixin likeButton {
     border: none;
     background-color: transparent;
-    margin-right: var(--space-md);
-    font-size: var(--space-md);
-    border-right: 1px solid var(--grey-3);
-    padding-right: var(--space-md);
-    color: var(--grey-6);
-    transition: color var(--duration-100) ease-in-out;
+    margin-right: $space-md;
+    font-size: $space-md;
+    border-right: 1px solid $grey-3;
+    padding-right: $space-md;
+    color: $grey-6;
+    transition: color $duration-100 ease-in-out;
     outline: none;
     text-align: center;
 
     p {
-      font-size: var(--space-sm);
+      font-size: $space-sm;
       margin: 0;
     }
   }

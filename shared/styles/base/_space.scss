@@ -1,18 +1,16 @@
-:root {
-  --space-base: 1rem;
-  --space-unit: 0.25rem;
+$space-base: 1rem;
+$space-unit: 0.25rem;
 
-  --space-3xs: calc(var(--space-base) - 3.5 * var(--space-unit));
-  --space-2xs: calc(var(--space-base) - 3 * var(--space-unit));
-  --space-xs: calc(var(--space-base) - 2 * var(--space-unit));
-  --space-sm: calc(var(--space-base) - 1 * var(--space-unit));
-  --space-md: var(--space-base);
-  --space-lg: calc(var(--space-base) + 1 * var(--space-unit));
-  --space-xl: calc(var(--space-base) + 2 * var(--space-unit));
-  --space-2xl: calc(var(--space-base) + 4 * var(--space-unit));
-  --space-3xl: calc(var(--space-base) + 6 * var(--space-unit));
-  --space-4xl: calc(var(--space-base) + 10 * var(--space-unit));
-  --space-5xl: calc(var(--space-base) + 16 * var(--space-unit));
-  --space-6xl: calc(var(--space-base) + 26 * var(--space-unit));
-  --space-7xl: calc(var(--space-base) + 42 * var(--space-unit));
-}
+$space-3xs: calc(#{$space-base} - 3.5 * #{$space-unit});
+$space-2xs: calc(#{$space-base} - 3 * #{$space-unit});
+$space-xs: calc(#{$space-base} - 2 * #{$space-unit});
+$space-sm: calc(#{$space-base} - 1 * #{$space-unit});
+$space-md: $space-base;
+$space-lg: calc(#{$space-base} + 1 * #{$space-unit});
+$space-xl: calc(#{$space-base} + 2 * #{$space-unit});
+$space-2xl: calc(#{$space-base} + 4 * #{$space-unit});
+$space-3xl: calc(#{$space-base} + 6 * #{$space-unit});
+$space-4xl: calc(#{$space-base} + 10 * #{$space-unit});
+$space-5xl: calc(#{$space-base} + 16 * #{$space-unit});
+$space-6xl: calc(#{$space-base} + 26 * #{$space-unit});
+$space-7xl: calc(#{$space-base} + 42 * #{$space-unit});

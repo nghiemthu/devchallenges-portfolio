@@ -1,8 +1,10 @@
+@import "shared/styles/main";
+
 .skills {
-  box-shadow: var(--shadow);
-  margin-bottom: var(--space-2xl);
-  border-radius: var(--rounded-lg);
-  padding: var(--space-md);
-  padding-bottom: var(--space-2xl);
-  background-color: var(--white);
+  box-shadow: $shadow;
+  margin-bottom: $space-2xl;
+  border-radius: $rounded-lg;
+  padding: $space-md;
+  padding-bottom: $space-2xl;
+  background-color: $white;
 }

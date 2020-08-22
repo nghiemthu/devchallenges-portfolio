@@ -1,24 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap");
 
-:root {
-  --text-base: 1rem;
-  --text-unit: 0.125rem;
+$text-base: 1rem;
+$text-unit: 0.125rem;
 
-  --text-2xs: calc(var(--text-base) - 3 * var(--text-unit));
+$text-2xs: calc(#{$text-base} - 3 * #{$text-unit});
 
-  --text-xs: calc(var(--text-base) - 2 * var(--text-unit));
-  --text-sm: calc(var(--text-base) - 1 * var(--text-unit));
-  --text-md: var(--text-base);
-  --text-lg: calc(var(--text-base) + 1 * var(--text-unit));
-  --text-xl: calc(var(--text-base) + 2 * var(--text-unit));
-  --text-2xl: calc(var(--text-base) + 4 * var(--text-unit));
-  --text-3xl: calc(var(--text-base) + 6 * var(--text-unit));
-  --text-4xl: calc(var(--text-base) + 10 * var(--text-unit));
-  --text-5xl: calc(var(--text-base) + 16 * var(--text-unit));
-  --text-6xl: calc(var(--text-base) + 26 * var(--text-unit));
+$text-xs: calc(#{$text-base} - 2 * #{$text-unit});
+$text-sm: calc(#{$text-base} - 1 * #{$text-unit});
+$text-md: $text-base;
+$text-lg: calc(#{$text-base} + 1 * #{$text-unit});
+$text-xl: calc(#{$text-base} + 2 * #{$text-unit});
+$text-2xl: calc(#{$text-base} + 4 * #{$text-unit});
+$text-3xl: calc(#{$text-base} + 6 * #{$text-unit});
+$text-4xl: calc(#{$text-base} + 10 * #{$text-unit});
+$text-5xl: calc(#{$text-base} + 16 * #{$text-unit});
+$text-6xl: calc(#{$text-base} + 26 * #{$text-unit});
 
-  --font-family: "Lato", sans-serif;
-  --heading-font-family: "Poppins", "Lato", sans-serif;
-  --serif-font-family: "PT Serif", serif;
-}
+$font-family: "Lato", sans-serif;
+$heading-font-family: "Poppins", "Lato", sans-serif;
+$serif-font-family: "PT Serif", serif;

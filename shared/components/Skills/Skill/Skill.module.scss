@@ -1,40 +1,42 @@
+@import "shared/styles/main";
+
 .skill {
   display: flex;
   align-items: center;
-  color: var(--grey-6);
+  color: $grey-6;
   background-color: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
 
   &:hover {
-    color: var(--primary-color);
+    color: $primary-color;
   }
 
   &:hover &_name {
-    color: var(--primary-color);
+    color: $primary-color;
   }
 
   &:hover &_endorsementsButton {
-    color: var(--primary-color);
+    color: $primary-color;
   }
 
   &_name {
-    font-family: var(--heading-font-family);
-    font-size: var(--text-lg);
+    font-family: $heading-font-family;
+    font-size: $text-lg;
     font-weight: 500;
-    margin-right: var(--space-xs);
-    color: var(--primary-text-color);
+    margin-right: $space-xs;
+    color: $primary-text-color;
     text-align: left;
   }
 
   &_endorsementsButton {
-    margin-left: var(--space-xs);
+    margin-left: $space-xs;
     background-color: transparent;
     border: none;
     padding: 0;
-    color: var(--grey-6);
-    font-family: var(--font-family);
+    color: $grey-6;
+    font-family: $font-family;
     font-weight: 500;
     text-align: left;
   }

@@ -1,13 +1,15 @@
+@import "shared/styles/main";
+
 .tags {
   &_tag {
-    background-color: var(--default-button-background-color);
-    color: var(--grey-6);
-    border-radius: var(--rounded-md);
-    padding: var(--space-2xs) var(--space-xs);
-    margin-right: var(--space-sm);
+    background-color: $default-button-background-color;
+    color: $grey-6;
+    border-radius: $rounded-md;
+    padding: $space-2xs $space-xs;
+    margin-right: $space-sm;
     font-weight: 700;
-    font-size: var(--text-xs);
-    margin-bottom: var(--space-2xs);
+    font-size: $text-xs;
+    margin-bottom: $space-2xs;
     display: inline-block;
   }
 }

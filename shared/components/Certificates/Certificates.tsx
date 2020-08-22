@@ -42,7 +42,7 @@ const Certificates: FunctionComponent<{ certificates: any }> = ({
                     <h4>{getPathDetails(pathId)?.name}</h4>
                     <p
                       className={styles.certificates_issued}
-                      style={{ marginBottom: "var(--space-lg)" }}
+                      style={{ marginBottom: "$space-lg)" }}
                     >
                       Issued on <b>{moment(createdAt).format("MMMM YYYY")}</b>
                     </p>
