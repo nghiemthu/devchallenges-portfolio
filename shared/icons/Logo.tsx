@@ -1,10 +1,7 @@
 import React, { useContext } from "react";
-import AppContext from "context/AppContext";
 
-const Logo = () => {
-  const { state } = useContext(AppContext);
-
-  if (state.theme === "dark") {
+const Logo = ({ theme }) => {
+  if (theme === "dark") {
     return (
       <svg
         width="150"
