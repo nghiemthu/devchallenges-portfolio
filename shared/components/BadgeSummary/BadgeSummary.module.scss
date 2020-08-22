@@ -1,0 +1,36 @@
+.badgeSummary {
+  display: block;
+
+  &_badgeWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: var(--space-sm);
+
+    &_borderBottom {
+      border-bottom: 1px solid var(--grey-3);
+      margin-bottom: var(--space-sm);
+    }
+
+    &_number {
+      margin-left: var(--space-xs);
+      font-family: var(--heading-font-family);
+      color: var(--grey-7);
+    }
+
+    &_number {
+      margin-top: var(--space-2xs);
+      text-align: right;
+      color: var(--grey-5);
+      font-size: var(--text-sm);
+    }
+  }
+
+  &_panel {
+    background-color: var(--white);
+    height: 100%;
+    padding: var(--space-sm);
+    border-radius: var(--rounded);
+    box-shadow: var(--shadow-sm);
+  }
+}

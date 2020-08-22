@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import styles from "./LevelIndicator.module.scss";
 import cn from "classnames";
-import { ProficientLevel, proficientLevels } from "type/level";
+import { ProficientLevel, proficientLevels } from "types/level";
 
 const LevelIndicator: FunctionComponent<{ levelIndex: number }> = ({
   levelIndex,

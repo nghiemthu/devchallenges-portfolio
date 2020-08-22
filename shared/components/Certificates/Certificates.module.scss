@@ -1,0 +1,32 @@
+@import "shared/styles/base/_breakpoints";
+
+.certificates {
+  &_certificates {
+    margin-bottom: var(--space-lg);
+  }
+
+  &_certificate {
+    display: block;
+    padding: var(--space-xs);
+    margin-bottom: var(--space-md);
+    background-color: var(--white);
+    color: var(--grey-8);
+    border-radius: var(--rounded);
+    box-shadow: var(--shadow-sm);
+    font-family: var(--heading-font-family);
+  }
+
+  &_issued {
+    font-size: var(--text-xs);
+    color: var(--grey-6);
+
+    b {
+      font-weight: 700;
+      color: var(--grey-7);
+    }
+  }
+
+  &_certificatesAndChallenges {
+    margin-top: var(--space-xl);
+  }
+}

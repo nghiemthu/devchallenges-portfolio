@@ -4,7 +4,6 @@ import styles from "./CardSolution.module.scss";
 import Grid from "@material-ui/core/Grid";
 
 import { FavoriteRounded, ChatRounded } from "@material-ui/icons";
-import cn from "classnames";
 import LevelIndicator from "components/LevelIndicator/LevelIndicator";
 import Tags from "components/Tags/Tags";
 
@@ -16,7 +15,7 @@ const CardSolution: FunctionComponent<{
   return (
     <a href={solutionPath} className={styles.cardSolution}>
       <div className={styles.cardSolution_topSection}>
-        <h3 className={styles.cardSolution_title}>{solution.title}</h3>
+        <h4 className={styles.cardSolution_title}>{solution.title}</h4>
       </div>
 
       <div className={styles.cardSolution_space}></div>

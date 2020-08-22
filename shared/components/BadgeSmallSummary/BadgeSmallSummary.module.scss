@@ -1,0 +1,30 @@
+.badgeSmallSummary {
+  display: flex;
+  min-width: 200px;
+
+  &_badgeWrapper {
+    display: flex;
+    align-items: center;
+    margin-right: var(--space-xs);
+
+    // background-color: var(--grey-7);
+
+    // border: 1px solid var(--grey-4);
+
+    padding: var(--space-2xs);
+    border-radius: var(--rounded);
+
+    &_number {
+      margin-left: var(--space-xs);
+      font-family: var(--heading-font-family);
+      color: var(--grey-5);
+      font-size: var(--text-xs);
+      font-weight: 500;
+    }
+
+    &_seperator {
+      margin: 0 var(--space-xs);
+      color: var(--grey-4);
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.recentFeedbacks {
+  &_panel {
+    background-color: var(--white);
+    border-radius: var(--rounded-lg);
+    box-shadow: var(--shadow);
+    padding: var(--space-md);
+    margin-top: var(--space-md);
+
+    &_card {
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--grey-3);
+
+      &_time {
+        font-size: var(--text-xs);
+        color: var(--grey-5);
+        margin-bottom: var(--space-2xs);
+      }
+
+      &_feedback {
+        color: var(--grey-9);
+        margin-bottom: var(--space-xs);
+      }
+
+      &_solution {
+        color: var(--grey-5);
+
+        &_title {
+          font-size: var(--text-sm);
+          background-color: transparent;
+          font-weight: bold;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          color: var(--grey-7);
+
+          &:hover {
+            color: var(--blue-dark);
+          }
+        }
+      }
+    }
+  }
+}
