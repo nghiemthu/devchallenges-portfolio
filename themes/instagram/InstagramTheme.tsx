@@ -22,6 +22,7 @@ import InstagramTabs from "./components/InstagramTabs/InstagramTabs";
 import InstagramHeader from "./components/InstagramHeader/InstagramHeader";
 import InstagramFooter from "./components/InstagramFooter/InstagramFooter";
 import ReactMarkdown from "react-markdown";
+import SEO from "components/SEO/SEO";
 
 enum TabValues {
   overview = "overview",
@@ -68,10 +69,7 @@ export default function InstagramTheme({
 
   return (
     <div className={styles.instagramTheme}>
-      <Head>
-        <title>{profile.name}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SEO user={profile} />
 
       <div className={styles.instagramTheme_content}>
         <InstagramHeader user={profile} />

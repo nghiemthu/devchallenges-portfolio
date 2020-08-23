@@ -23,6 +23,7 @@ import Footer from "components/Footer/Footer";
 import Socials from "components/Socials/Socials";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "components/CodeBlock/CodeBlock";
+import SEO from "components/SEO/SEO";
 
 enum TabValues {
   overview = "overview",
@@ -70,10 +71,7 @@ export default function DefaultTheme({
 
   return (
     <div className={styles.defaultTheme}>
-      <Head>
-        <title>{profile.name}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SEO user={profile} />
 
       <HorizontalLayout
         openOnMobile={navOpenOnMobile}
