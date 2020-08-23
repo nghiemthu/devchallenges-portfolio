@@ -179,77 +179,79 @@ export default function InstagramTheme({
           </Grid>
         </div>
 
-        <InstagramTabs
-          tabs={tabs}
-          onTabSelected={setTab}
-          currentTabValue={tab}
-        ></InstagramTabs>
+        <div style={{ minHeight: "50vh" }}>
+          <InstagramTabs
+            tabs={tabs}
+            onTabSelected={setTab}
+            currentTabValue={tab}
+          ></InstagramTabs>
 
-        {tab === TabValues.overview && (
-          <>
-            {profile.readme.length > 0 && (
-              <div className={styles.instagramTheme_readme}>
-                <ReactMarkdown
-                  source={profile.readme}
-                  escapeHtml={false}
-                  renderers={{ code: CodeBlock }}
-                />
-              </div>
-            )}
+          {tab === TabValues.overview && (
+            <>
+              {profile.readme.length > 0 && (
+                <div className={styles.instagramTheme_readme}>
+                  <ReactMarkdown
+                    source={profile.readme}
+                    escapeHtml={false}
+                    renderers={{ code: CodeBlock }}
+                  />
+                </div>
+              )}
 
-            {skills.length > 0 && <Skills skills={skills} />}
+              {skills.length > 0 && <Skills skills={skills} />}
 
-            {pinnedProjects.length > 0 && (
-              <div className={styles.instagramTheme_pinned}>
-                <h3>Pinned</h3>
+              {pinnedProjects.length > 0 && (
+                <div className={styles.instagramTheme_pinned}>
+                  <h3>Pinned</h3>
 
+                  <Grid container spacing={3}>
+                    {pinnedProjects.map((solution) => (
+                      <Grid item xs={12} sm={6} key={solution.id}>
+                        <CardSolution solution={solution} />
+                      </Grid>
+                    ))}
+                  </Grid>
+                </div>
+              )}
+
+              {feedbacks.length > 0 && (
+                <RecentFeedbacks recentFeedbacks={feedbacks} />
+              )}
+            </>
+          )}
+
+          {tab === TabValues.projects && (
+            <>
+              {solutions.length > 0 && (
                 <Grid container spacing={3}>
-                  {pinnedProjects.map((solution) => (
+                  {solutions?.map((solution) => (
                     <Grid item xs={12} sm={6} key={solution.id}>
                       <CardSolution solution={solution} />
                     </Grid>
                   ))}
                 </Grid>
-              </div>
-            )}
+              )}
+            </>
+          )}
 
-            {feedbacks.length > 0 && (
-              <RecentFeedbacks recentFeedbacks={feedbacks} />
-            )}
-          </>
-        )}
+          {tab === TabValues.achievements && (
+            <>
+              {certificates.length > 0 && (
+                <>
+                  <h3>Certificates</h3>
+                  <Certificates certificates={certificates} />
+                </>
+              )}
 
-        {tab === TabValues.projects && (
-          <>
-            {solutions.length > 0 && (
-              <Grid container spacing={3}>
-                {solutions?.map((solution) => (
-                  <Grid item xs={12} sm={6} key={solution.id}>
-                    <CardSolution solution={solution} />
-                  </Grid>
-                ))}
-              </Grid>
-            )}
-          </>
-        )}
-
-        {tab === TabValues.achievements && (
-          <>
-            {certificates.length > 0 && (
-              <>
-                <h3>Certificates</h3>
-                <Certificates certificates={certificates} />
-              </>
-            )}
-
-            {badges.length > 0 && (
-              <>
-                <h3>Badges</h3>
-                <BadgeSummary badges={badges} />
-              </>
-            )}
-          </>
-        )}
+              {badges.length > 0 && (
+                <>
+                  <h3>Badges</h3>
+                  <BadgeSummary badges={badges} />
+                </>
+              )}
+            </>
+          )}
+        </div>
 
         <InstagramFooter user={profile} />
       </div>
