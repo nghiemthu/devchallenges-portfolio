@@ -199,73 +199,72 @@ export default function DefaultTheme({
           </>
         }
       >
-        <Tabs tabs={tabs} onTabSelected={setTab} currentTabValue={tab}></Tabs>
+        <div style={{ minHeight: "100vh" }}>
+          <Tabs tabs={tabs} onTabSelected={setTab} currentTabValue={tab}></Tabs>
+          {tab === TabValues.overview && (
+            <>
+              {profile.readme && profile.readme.length > 0 && (
+                <div className={styles.defaultTheme_readme}>
+                  <ReactMarkdown
+                    source={profile.readme}
+                    escapeHtml={false}
+                    renderers={{ code: CodeBlock }}
+                  />
+                </div>
+              )}
 
-        {tab === TabValues.overview && (
-          <>
-            {profile.readme.length > 0 && (
-              <div className={styles.defaultTheme_readme}>
-                <ReactMarkdown
-                  source={profile.readme}
-                  escapeHtml={false}
-                  renderers={{ code: CodeBlock }}
-                />
-              </div>
-            )}
+              {skills.length > 0 && <Skills skills={skills} />}
 
-            {skills.length > 0 && <Skills skills={skills} />}
+              {pinnedProjects.length > 0 && (
+                <div className={styles.defaultTheme_pinned}>
+                  <h3>Pinned</h3>
 
-            {pinnedProjects.length > 0 && (
-              <div className={styles.defaultTheme_pinned}>
-                <h3>Pinned</h3>
+                  <Grid container spacing={3}>
+                    {pinnedProjects.map((solution) => (
+                      <Grid item xs={12} sm={6} key={solution.id}>
+                        <CardSolution solution={solution} />
+                      </Grid>
+                    ))}
+                  </Grid>
+                </div>
+              )}
 
+              {feedbacks.length > 0 && (
+                <RecentFeedbacks recentFeedbacks={feedbacks} />
+              )}
+            </>
+          )}
+          {tab === TabValues.projects && (
+            <>
+              {solutions.length > 0 && (
                 <Grid container spacing={3}>
-                  {pinnedProjects.map((solution) => (
+                  {solutions?.map((solution) => (
                     <Grid item xs={12} sm={6} key={solution.id}>
                       <CardSolution solution={solution} />
                     </Grid>
                   ))}
                 </Grid>
-              </div>
-            )}
+              )}
+            </>
+          )}
+          {tab === TabValues.achievements && (
+            <>
+              {certificates.length > 0 && (
+                <>
+                  <h3>Certificates</h3>
+                  <Certificates certificates={certificates} />
+                </>
+              )}
 
-            {feedbacks.length > 0 && (
-              <RecentFeedbacks recentFeedbacks={feedbacks} />
-            )}
-          </>
-        )}
-
-        {tab === TabValues.projects && (
-          <>
-            {solutions.length > 0 && (
-              <Grid container spacing={3}>
-                {solutions?.map((solution) => (
-                  <Grid item xs={12} sm={6} key={solution.id}>
-                    <CardSolution solution={solution} />
-                  </Grid>
-                ))}
-              </Grid>
-            )}
-          </>
-        )}
-
-        {tab === TabValues.achievements && (
-          <>
-            {certificates.length > 0 && (
-              <>
-                <h3>Certificates</h3>
-                <Certificates certificates={certificates} />
-              </>
-            )}
-
-            {badges.length > 0 && (
-              <>
-                <h3>Badges</h3>
-                <BadgeSummary badges={badges} />
-              </>
-            )}
-          </>
-        )}
+              {badges.length > 0 && (
+                <>
+                  <h3>Badges</h3>
+                  <BadgeSummary badges={badges} />
+                </>
+              )}
+            </>
+          )}
+        </div>
 
         <Footer />
       </HorizontalLayout>
