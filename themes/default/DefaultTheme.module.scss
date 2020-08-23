@@ -89,4 +89,16 @@
   &_pinned {
     margin-bottom: $space-2xl;
   }
+
+  &_readme {
+    padding: $space-lg;
+    background-color: $white;
+    border-radius: $rounded-md;
+    box-shadow: $shadow;
+    margin-bottom: $space-xl;
+
+    img {
+      border-radius: $rounded-sm;
+    }
+  }
 }

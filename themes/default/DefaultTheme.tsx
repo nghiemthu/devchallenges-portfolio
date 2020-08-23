@@ -21,6 +21,8 @@ import RecentFeedbacks from "components/RecentFeedbacks/RecentFeedbacks";
 import HorizontalLayout from "components/Layout/HorizontalLayout";
 import Footer from "components/Footer/Footer";
 import Socials from "components/Socials/Socials";
+import ReactMarkdown from "react-markdown";
+import CodeBlock from "components/CodeBlock/CodeBlock";
 
 enum TabValues {
   overview = "overview",
@@ -201,6 +203,16 @@ export default function DefaultTheme({
 
         {tab === TabValues.overview && (
           <>
+            {profile.readme.length > 0 && (
+              <div className={styles.defaultTheme_readme}>
+                <ReactMarkdown
+                  source={profile.readme}
+                  escapeHtml={false}
+                  renderers={{ code: CodeBlock }}
+                />
+              </div>
+            )}
+
             {skills.length > 0 && <Skills skills={skills} />}
 
             {pinnedProjects.length > 0 && (

@@ -97,10 +97,6 @@ strong {
   font-weight: bold;
 }
 
-a {
-  text-decoration: none;
-}
-
 html {
   box-sizing: border-box;
 }
@@ -119,11 +115,6 @@ section,
 main,
 form legend {
   display: block;
-}
-
-ol,
-ul {
-  margin: 0;
 }
 
 blockquote,
@@ -174,4 +165,12 @@ img,
 video,
 svg {
   max-width: 100%;
+}
+
+b {
+  font-weight: 700;
+}
+
+i {
+  font-style: italic;
 }

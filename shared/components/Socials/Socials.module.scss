@@ -30,6 +30,9 @@
   }
 
   svg {
+    fill: $grey-6;
+    width: 20px;
+
     &:hover {
       fill: $blue-dark;
     }

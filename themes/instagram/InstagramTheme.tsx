@@ -14,13 +14,14 @@ import CardSolution from "components/CardSolution/CardSolution";
 import Grid from "@material-ui/core/Grid";
 import Skills from "components/Skills/Skills";
 import BadgeSummary from "components/BadgeSummary/BadgeSummary";
+import CodeBlock from "components/CodeBlock/CodeBlock";
 import BadgeSmallSummary from "components/BadgeSmallSummary/BadgeSmallSummary";
 import challengePaths from "data/challengePaths";
 import RecentFeedbacks from "components/RecentFeedbacks/RecentFeedbacks";
 import InstagramTabs from "./components/InstagramTabs/InstagramTabs";
 import InstagramHeader from "./components/InstagramHeader/InstagramHeader";
-import Footer from "components/Footer/Footer";
 import InstagramFooter from "./components/InstagramFooter/InstagramFooter";
+import ReactMarkdown from "react-markdown";
 
 enum TabValues {
   overview = "overview",
@@ -188,6 +189,16 @@ export default function InstagramTheme({
 
         {tab === TabValues.overview && (
           <>
+            {profile.readme.length > 0 && (
+              <div className={styles.instagramTheme_readme}>
+                <ReactMarkdown
+                  source={profile.readme}
+                  escapeHtml={false}
+                  renderers={{ code: CodeBlock }}
+                />
+              </div>
+            )}
+
             {skills.length > 0 && <Skills skills={skills} />}
 
             {pinnedProjects.length > 0 && (

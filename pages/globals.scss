@@ -55,3 +55,12 @@ li {
   line-height: 1.5;
   margin-bottom: $space-2xs;
 }
+
+blockquote {
+  color: $grey-7;
+  padding-left: $space-lg;
+  border-left: 4px solid $grey-6;
+  border-radius: $rounded-sm;
+  font-style: italic;
+  margin-bottom: $space-md;
+}
