@@ -10,10 +10,15 @@ import Tags from "components/Tags/Tags";
 const CardSolution: FunctionComponent<{
   solution: any;
 }> = ({ solution }) => {
-  const solutionPath = `/solutions/${solution.id}`;
+  const solutionPath = `https://devchallenges.io/solutions/${solution.id}`;
 
   return (
-    <a href={solutionPath} className={styles.cardSolution}>
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href={solutionPath}
+      className={styles.cardSolution}
+    >
       <div className={styles.cardSolution_topSection}>
         <h4 className={styles.cardSolution_title}>{solution.title}</h4>
       </div>

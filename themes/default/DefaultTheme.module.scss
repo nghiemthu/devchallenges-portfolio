@@ -1,6 +1,6 @@
 @import "shared/styles/main";
 
-.portfolio {
+.defaultTheme {
   color: inherit;
 
   h3 {
@@ -20,6 +20,16 @@
     &_profileImage {
       border-radius: $rounded-lg;
       margin-bottom: $space-lg;
+    }
+
+    &_profileImageMobile {
+      border-radius: $rounded-full;
+
+      box-shadow: $shadow-lg;
+    }
+
+    &_socialsMobile {
+      margin-top: $space-2xl;
     }
 
     &_name {
@@ -42,6 +52,18 @@
       font-size: $text-md;
     }
 
+    &_contact {
+      display: flex;
+      align-items: center;
+      font-size: $text-md;
+      color: $grey-7;
+      margin-bottom: $space-xs;
+
+      &_value {
+        margin-left: $space-xs;
+      }
+    }
+
     &_achievement {
       padding: $space-md 0 $space-xs;
       border-top: 1px solid $grey-3;
@@ -55,11 +77,16 @@
         display: flex;
         align-items: center;
         color: $grey-7;
+        margin-bottom: $space-xs;
 
         &_name {
           margin-left: $space-xs;
         }
       }
     }
+  }
+
+  &_pinned {
+    margin-bottom: $space-2xl;
   }
 }

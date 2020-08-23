@@ -1,0 +1,20 @@
+@import "shared/styles/main";
+
+.instagramHeader {
+  display: flex;
+  padding: $space-md;
+  justify-content: space-between;
+
+  &_myProfile {
+    border: none;
+    background-color: $blue-dark;
+    padding: $space-xs $space-md;
+    color: $grey-3;
+    border-radius: $rounded-lg;
+    font-family: $heading-font-family;
+    font-size: $text-xs;
+    cursor: pointer;
+
+    box-shadow: 0px 4px 8px rgba(92, 148, 225, 0.25);
+  }
+}

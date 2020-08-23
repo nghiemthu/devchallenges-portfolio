@@ -1,0 +1,108 @@
+@import "shared/styles/main";
+
+.modal {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  padding: $space-sm;
+
+  border-radius: $rounded-md;
+  box-shadow: $shadow-sm;
+  overflow: scroll;
+
+  &_content {
+    background-color: $white;
+
+    &_wrapper {
+      position: relative;
+      max-height: 100%;
+    }
+  }
+
+  @include breakpoint("md") {
+    padding: $space-xl;
+    height: auto;
+
+    max-height: 80vh;
+    top: 10%;
+    left: 50%;
+    width: 750px;
+    margin-left: -375px;
+    overflow: initial;
+  }
+
+  &_wrapper {
+    position: relative;
+  }
+
+  &_shadow {
+    z-index: 9;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $always-dark;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.7;
+  }
+
+  &__closed {
+    display: none;
+  }
+
+  &__fullHeight {
+    @include breakpoint("md") {
+      height: 100%;
+    }
+  }
+
+  &__scrollable {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__small {
+    @include breakpoint("md") {
+      width: 460px;
+      margin-left: -230px;
+    }
+  }
+
+  &_closeButton {
+    z-index: 11;
+    position: absolute;
+    top: $space-sm;
+    right: $space-sm;
+    padding: $space-2xs;
+    cursor: pointer;
+    border: none;
+    color: $grey-5;
+    outline: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: $primary-color;
+    }
+  }
+
+  &_footer {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    border-radius: 0 0 $rounded-md $rounded-md;
+
+    background-color: $white;
+  }
+}

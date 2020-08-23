@@ -1,0 +1,48 @@
+@import "shared/styles/main";
+
+.cardUser {
+  display: flex;
+  margin-bottom: 0;
+  cursor: pointer;
+  width: fit-content;
+
+  &__centered {
+    align-items: center;
+  }
+
+  &_imgWrapper {
+    width: 32px;
+    height: 32px;
+    border-radius: $rounded;
+    overflow: hidden;
+    margin-right: $space-sm;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: bottom;
+    }
+
+    &__small {
+      width: 24px;
+      height: 24px;
+      border-radius: $rounded-sm;
+    }
+  }
+
+  h5,
+  h6 {
+    margin-bottom: $space-3xs;
+    color: $grey-7;
+  }
+
+  h6 {
+    color: $grey-5;
+    display: inline-block;
+    margin-right: $space-sm;
+    font-weight: 500;
+    font-size: $text-xs;
+  }
+}

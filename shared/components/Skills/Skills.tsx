@@ -13,7 +13,7 @@ const Skills: FunctionComponent<{ skills: any }> = ({ skills }) => {
       <div className={styles.skills_content}>
         <Grid container spacing={4}>
           {skills.map((skill) => (
-            <Grid item xs={12} sm={6} key={skill.id}>
+            <Grid item xs={12} md={6} key={skill.id}>
               <Skill skill={skill} />
             </Grid>
           ))}

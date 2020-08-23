@@ -1,15 +1,16 @@
+@import "shared/styles/base/_breakpoints";
 @import "shared/styles/main";
 
-.tabs {
+.instagramTabs {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $white;
-  padding: $space-xs;
-  border-radius: $rounded-lg;
-  box-shadow: $shadow;
 
   margin-bottom: $space-xl;
+  max-width: 520px;
+  margin: 0 auto;
+  margin-bottom: $space-4xl;
+  padding: 0;
 
   ul,
   li,
@@ -20,7 +21,6 @@
   }
 
   li {
-    flex-grow: 1;
     margin-right: $space-xs;
 
     &:last-child {
@@ -32,10 +32,14 @@
     text-align: center;
     font-family: $heading-font-family;
     font-size: $text-sm;
-    padding: $space-sm;
+
+    width: 100px;
+    height: 100px;
+    padding: $space-xs;
+
     border-radius: $rounded-lg;
     outline: none;
-    background-color: $white;
+    background-color: transparent;
     color: $grey-5;
     font-weight: 700;
 
@@ -54,41 +58,27 @@
       font-weight: 700;
       position: relative;
       color: $primary-text-color;
-
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: calc(-1 * #{$space-xs});
-        left: calc(50% - 38px);
-        width: 80px;
-        height: 4px;
-        background-color: $primary-color;
-        border-radius: $rounded $rounded 0 0;
-
-        @include breakpoint("sm") {
-          left: calc(50% - 68px);
-          width: 140px;
-        }
-      }
+      background-color: $grey-3;
     }
   }
 
   &_label {
     &_text {
-      display: none;
+      font-size: $text-xs;
 
       @include breakpoint("sm") {
-        display: initial;
+        font-size: $text-sm;
       }
     }
 
     @include breakpoint("sm") {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
 
       &_text {
-        margin-left: $space-xs;
+        margin-left: 0;
       }
     }
   }

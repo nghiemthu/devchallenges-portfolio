@@ -21,7 +21,9 @@ const RecentFeedbacks: FunctionComponent<{ recentFeedbacks: any }> = ({
               <div className={styles.recentFeedbacks_panel_card_solution}>
                 on{" "}
                 <a
-                  href={`/solutions/${parentId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`https://devchallenges.io/solutions/${parentId}`}
                   className={styles.recentFeedbacks_panel_card_solution_title}
                 >
                   {solution.title}

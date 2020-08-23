@@ -4,6 +4,25 @@
   display: flex;
   max-height: 100vh;
   background-color: $background-color;
+  position: relative;
+
+  &_closeButton {
+    z-index: 21;
+    position: absolute;
+    right: $space-xl;
+    top: $space-xl;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: $blue-dark;
+    box-shadow: $shadow-lg;
+    border-radius: $rounded;
+    color: $grey-3;
+
+    @include breakpoint("sm") {
+      display: none;
+    }
+  }
 
   &_sideNavigation {
     width: 380px;
@@ -12,6 +31,55 @@
     padding: $space-xl;
     box-shadow: $shadow-lg;
     background-color: $white;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 20;
+
+    transform: translateX(-102%);
+    transition: all $duration-200 ease-in-out;
+
+    &__openOnMobile {
+      transform: translateX(0);
+    }
+
+    @include breakpoint("sm") {
+      display: flex;
+      position: relative;
+      transform: translateX(0);
+    }
+  }
+
+  &_sideNavigation {
+    &__mobile {
+      width: 52px;
+      height: 100%;
+      height: 100vh;
+      padding: $space-lg $space-xs;
+      box-shadow: $shadow-lg;
+      background-color: $white;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      @include breakpoint("sm") {
+        display: none;
+      }
+    }
   }
 
   &_contentWrapper {

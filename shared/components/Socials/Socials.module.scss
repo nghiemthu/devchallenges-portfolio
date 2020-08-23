@@ -1,0 +1,37 @@
+@import "shared/styles/main";
+
+.socials {
+  margin-top: $space-md;
+  margin-bottom: $space-xs;
+  font-size: 20px;
+  color: $grey-6;
+
+  &_link {
+    margin-bottom: $space-md;
+    margin-right: $space-xs;
+    margin-left: $space-xs;
+    color: $grey-6;
+
+    display: inline-block;
+
+    &:first-child {
+      @include breakpoint("sm") {
+        margin-left: 0;
+      }
+    }
+  }
+
+  a {
+    color: $grey-6;
+
+    &:hover {
+      color: $blue-dark;
+    }
+  }
+
+  svg {
+    &:hover {
+      fill: $blue-dark;
+    }
+  }
+}

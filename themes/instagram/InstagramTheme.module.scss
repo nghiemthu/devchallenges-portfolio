@@ -1,0 +1,120 @@
+@import "shared/styles/main";
+
+.instagramTheme {
+  background-color: $background-color;
+
+  &_content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: $space-md;
+  }
+
+  h3 {
+    color: $grey-5;
+    font-size: $text-xs;
+    margin-bottom: $space-md;
+  }
+
+  &_summary {
+    padding: $space-4xl 0;
+    display: block;
+
+    &_profileImageWrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: $space-md;
+    }
+
+    &_profileImage {
+      width: 220px;
+      border-radius: $rounded-xl;
+    }
+
+    &_name {
+      font-size: $text-xl;
+      font-family: $heading-font-family;
+      font-weight: 500;
+      margin-bottom: $space-3xs;
+      text-align: center;
+
+      @include breakpoint("md") {
+        text-align: left;
+      }
+    }
+
+    &_username {
+      font-size: $text-md;
+      color: $grey-6;
+      font-family: $heading-font-family;
+      font-weight: 300;
+      margin-bottom: $space-md;
+      text-align: center;
+
+      @include breakpoint("md") {
+        text-align: left;
+      }
+    }
+
+    &_contact {
+      display: flex;
+      align-items: center;
+      font-size: $text-md;
+      color: $grey-7;
+      margin-bottom: $space-xs;
+
+      text-align: center;
+
+      @include breakpoint("md") {
+        text-align: left;
+      }
+
+      &_value {
+        margin-left: $space-xs;
+      }
+    }
+
+    &_bio {
+      color: $grey-7;
+      font-size: $text-md;
+      margin-bottom: $space-sm;
+      max-width: initial;
+      text-align: center;
+
+      @include breakpoint("md") {
+        text-align: left;
+      }
+    }
+
+    &_achievements {
+      margin: 0 auto;
+      width: fit-content;
+
+      @include breakpoint("md") {
+        margin: 0;
+      }
+    }
+
+    &_achievement {
+      padding: $space-sm 0 $space-2xs;
+
+      h3 {
+        margin-bottom: $space-sm;
+      }
+
+      &_certificate {
+        display: flex;
+        align-items: center;
+        color: $grey-7;
+        margin-bottom: var(--space-xs);
+
+        &_name {
+          margin-left: $space-xs;
+        }
+      }
+    }
+  }
+
+  &_pinned {
+    margin-bottom: $space-2xl;
+  }
+}

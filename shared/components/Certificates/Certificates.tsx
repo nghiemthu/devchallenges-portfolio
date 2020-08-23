@@ -28,7 +28,9 @@ const Certificates: FunctionComponent<{ certificates: any }> = ({
             <Grid item xs={12} md={6} key={id}>
               <a
                 className={styles.certificates_certificate}
-                href={`/certificate/${id}`}
+                href={`https://devchallenges.io/certificate/${id}`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Grid container direction="row" spacing={3}>
                   <Grid item xs={4}>

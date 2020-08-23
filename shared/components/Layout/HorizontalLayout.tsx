@@ -1,10 +1,38 @@
 import styles from "./HorizontalLayout.module.scss";
+import Logo from "icons/Logo";
+import LogoSmall from "icons/LogoSmall";
+import cn from "classnames";
+import { CloseRounded } from "@material-ui/icons";
 
-const HorizontalLayout = ({ sideNavigation, children }) => {
+const HorizontalLayout = ({
+  sideNavigation,
+  children,
+  openOnMobile = false,
+  sideNavigationMobile,
+  close = () => {},
+}) => {
   return (
     <div className={styles.horizontalLayout}>
-      <div className={styles.horizontalLayout_sideNavigation}>
-        {sideNavigation}
+      {openOnMobile && (
+        <button className={styles.horizontalLayout_closeButton} onClick={close}>
+          <CloseRounded />
+        </button>
+      )}
+
+      <div
+        className={cn(styles.horizontalLayout_sideNavigation, {
+          [styles.horizontalLayout_sideNavigation__openOnMobile]: openOnMobile,
+        })}
+      >
+        <div>{sideNavigation}</div>
+
+        <Logo />
+      </div>
+
+      <div className={styles.horizontalLayout_sideNavigation__mobile}>
+        {sideNavigationMobile && <div>{sideNavigationMobile}</div>}
+
+        <LogoSmall />
       </div>
 
       <div className={styles.horizontalLayout_contentWrapper}>

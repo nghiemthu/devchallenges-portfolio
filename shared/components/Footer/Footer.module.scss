@@ -1,0 +1,32 @@
+@import "shared/styles/main";
+
+.footer {
+  border-top: 1px solid $grey-3;
+  margin: $space-2xl 0 $space-xs;
+  padding: $space-xl 0 0;
+
+  @include breakpoint("sm") {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_links {
+    color: $grey-6;
+
+    a {
+      display: inline-block;
+      margin-right: $space-xl;
+      margin-bottom: $space-sm;
+
+      &:hover {
+        color: $blue-dark;
+      }
+    }
+  }
+
+  &_logo {
+    margin-bottom: $space-sm;
+  }
+}

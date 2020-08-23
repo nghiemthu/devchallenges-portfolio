@@ -2,12 +2,19 @@
 
 .skill {
   display: flex;
-  align-items: center;
+
   color: $grey-6;
   background-color: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
+  flex-direction: column;
+
+  @include breakpoint("sm") {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+  }
 
   &:hover {
     color: $primary-color;
@@ -30,8 +37,15 @@
     text-align: left;
   }
 
+  &_dot {
+    display: none;
+
+    @include breakpoint("sm") {
+      display: initial;
+    }
+  }
+
   &_endorsementsButton {
-    margin-left: $space-xs;
     background-color: transparent;
     border: none;
     padding: 0;
@@ -39,5 +53,34 @@
     font-family: $font-family;
     font-weight: 500;
     text-align: left;
+
+    @include breakpoint("sm") {
+      margin-left: $space-xs;
+    }
+  }
+
+  &_modal {
+    &_user {
+      margin: $space-md 0;
+    }
+
+    &_buttonRow {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 $space-xl;
+
+      button {
+        border: none;
+        background-color: $blue-dark;
+        padding: $space-xs $space-md;
+        color: $grey-3;
+        border-radius: $rounded-lg;
+        font-family: $heading-font-family;
+        font-size: $text-xs;
+        cursor: pointer;
+
+        box-shadow: 0px 4px 8px rgba(92, 148, 225, 0.25);
+      }
+    }
   }
 }
