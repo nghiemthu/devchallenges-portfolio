@@ -1,27 +1,41 @@
 import DefaultTheme from "../themes/default/DefaultTheme";
 import InstagramTheme from "../themes/instagram/InstagramTheme";
 import { useEffect, useState } from "react";
+import NotFound from "components/NotFound/NotFound";
 
 const themes = {
   default: DefaultTheme,
   instagram: InstagramTheme,
 };
 
-export async function getServerSideProps({ params }) {
-  const res = await fetch(
-    `${process.env.API_BASE_URL}/users/username/${params.id}`
-  );
+export async function getServerSideProps({ params, res }) {
+  try {
+    const res = await fetch(
+      `${process.env.API_BASE_URL}/users/username/${params.id}`
+    );
 
-  const profile = await res.json();
+    const profile = await res.json();
 
-  return {
-    props: {
-      profile,
-    },
-  };
+    if (profile.error) {
+      return { props: {} };
+    }
+
+    return {
+      props: {
+        profile,
+      },
+    };
+  } catch {
+    res.statusCode = 404;
+    return {};
+  }
 }
 
 export default function Portfolio({ profile }) {
+  if (!profile) {
+    console.log(profile);
+    return <NotFound />;
+  }
   const [solutions, setSolutions] = useState([]);
   const [skills, setSkills] = useState([]);
   const [certificates, setCertificates] = useState([]);

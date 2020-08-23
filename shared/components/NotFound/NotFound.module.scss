@@ -1,0 +1,16 @@
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: var(--space-4xl);
+
+  &_img {
+    width: 400px;
+    margin-bottom: var(--space-4xl);
+  }
+
+  p {
+    color: var(--grey-6);
+  }
+}
