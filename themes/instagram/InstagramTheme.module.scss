@@ -28,7 +28,11 @@
 
     &_profileImage {
       width: 220px;
+      height: 220px;
       border-radius: $rounded-xl;
+
+      object-fit: cover;
+      object-position: center;
     }
 
     &_name {
