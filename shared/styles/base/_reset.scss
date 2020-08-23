@@ -174,3 +174,7 @@ b {
 i {
   font-style: italic;
 }
+
+input[type="checkbox"] {
+  margin-right: $space-sm;
+}
