@@ -10,14 +10,18 @@
     z-index: 21;
     position: absolute;
     right: $space-xl;
-    top: $space-xl;
-    width: 32px;
-    height: 32px;
+    bottom: $space-xl;
+    width: 42px;
+    height: 42px;
     border: none;
     background-color: $blue-dark;
-    box-shadow: $shadow-lg;
+    box-shadow: $shadow-xl;
     border-radius: $rounded;
     color: $grey-3;
+    font-size: $text-lg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include breakpoint("sm") {
       display: none;

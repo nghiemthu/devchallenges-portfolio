@@ -15,7 +15,11 @@ const HorizontalLayout = ({
     <div className={styles.horizontalLayout}>
       {openOnMobile && (
         <button className={styles.horizontalLayout_closeButton} onClick={close}>
-          <CloseRounded color="inherit" fontSize="inherit" />
+          <CloseRounded
+            color="inherit"
+            fontSize="inherit"
+            style={{ zIndex: 100 }}
+          />
         </button>
       )}
 
