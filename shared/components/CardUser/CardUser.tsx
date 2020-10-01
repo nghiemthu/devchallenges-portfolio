@@ -16,7 +16,7 @@ const CardUser: FunctionComponent<{
       className={cn(styles.cardUser, {
         [styles.cardUser__centered]: !detailsHidden,
       })}
-      href={`/profile/${user.id}`}
+      href={`https://devchallenges.io/profile/${user.id}`}
       target="_blank"
       rel="noopener noreferrer"
     >
