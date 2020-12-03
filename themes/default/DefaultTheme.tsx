@@ -205,7 +205,6 @@ export default function DefaultTheme({
                 <div className={styles.defaultTheme_readme}>
                   <ReactMarkdown
                     source={profile.readme}
-                    escapeHtml={false}
                     renderers={{ code: CodeBlock }}
                   />
                 </div>
